@@ -10,6 +10,7 @@ import { db } from "../services/firebase/firebase";
 import { useDispatch } from "react-redux";
 import { setLoaderVisible } from "../redux/slices/loaderSlice";
 import { Alert } from "@mui/material";
+import "../styles/modal.css"
 
 const style = {
   position: "absolute",
@@ -78,6 +79,7 @@ export default function AddBookModal(props) {
   return (
     <div>
       <Modal
+      
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
         open={props.state}
@@ -91,12 +93,14 @@ export default function AddBookModal(props) {
         }}
       >
         <Fade in={props.state}>
-          <Box sx={style}>
+          <Box sx={style}  className="modal">
+
+            <Typography id="transition-modal-description" sx={{ mt: 2 }} className="modalcont">
             <Typography id="transition-modal-title" variant="h6" component="h2">
               Add Book Details
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               <input
+              className="modalInput"
                 type="text"
                 placeholder="Name"
                 name="name"
@@ -104,6 +108,7 @@ export default function AddBookModal(props) {
                 onChange={handleChange}
               />
               <input
+              className="modalInput"
                 type="text"
                 placeholder="ISBN"
                 name="isbn"
@@ -111,6 +116,7 @@ export default function AddBookModal(props) {
                 onChange={handleChange}
               />
               <input
+              className="modalInput"
                 type="text"
                 placeholder="Category"
                 name="category"
@@ -118,16 +124,17 @@ export default function AddBookModal(props) {
                 onChange={handleChange}
               />
               <input
+              className="modalInput"
                 type="number"
                 placeholder="Quantity"
                 name="quantity"
                 value={data.quantity}
                 onChange={handleChange}
               />
-              <br />
-              <Button varient="outlined" onClick={handleSubmit}>
+              
+              <button className="modalSubmit" onClick={handleSubmit}>
                 Add Book
-              </Button>
+              </button>
               {success ? (
                 <Alert severity="success">Book Added Successfully</Alert>
               ) : null}

@@ -10,7 +10,7 @@ import { db } from "../services/firebase/firebase";
 import { useDispatch } from "react-redux";
 import { setLoaderVisible } from "../redux/slices/loaderSlice";
 import { Alert } from "@mui/material";
-
+import "../styles/modal.css"
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
@@ -125,12 +125,14 @@ export default function AddUserModal(props) {
         }}
       >
         <Fade in={props.state}>
-          <Box sx={style}>
+          <Box sx={style} className="modal">
+           
+            <Typography id="transition-modal-description" sx={{ mt: 2 }} className="modalcont">
             <Typography id="transition-modal-title" variant="h6" component="h2">
               Add User Details
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
               <input
+              className="modalInput"
                 type="text"
                 placeholder="Name"
                 name="name"
@@ -138,6 +140,7 @@ export default function AddUserModal(props) {
                 onChange={handleChange}
               />
               <input
+              className="modalInput"
                 type="text"
                 placeholder="Mobile"
                 name="mobile"
@@ -145,13 +148,14 @@ export default function AddUserModal(props) {
                 onChange={handleChange}
               />
               <input
+              className="modalInput"
                 type="text"
                 placeholder="Email"
                 name="email"
                 value={data.email}
                 onChange={handleChange}
               />
-              <FormControl fullWidth>
+              <FormControl sx={{width:"70%"}}>
         <InputLabel id="demo-simple-select-label">Role</InputLabel>
         <Select
           labelId="demo-simple-select-label"
@@ -166,9 +170,9 @@ export default function AddUserModal(props) {
         </Select>
       </FormControl>
               <br />
-              <Button varient="outlined" onClick={handleSubmit}>
+              <button className="modalSubmit"  onClick={handleSubmit}>
                 Add User
-              </Button>
+              </button>
               {success ? (
                 <Alert severity="success">User Added Successfully</Alert>
               ) : null}

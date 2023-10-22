@@ -45,20 +45,23 @@ const BorrowerHistory = () => {
     <div className="BookListCont">
       <div className="topdiv">
         <Grid container>
-          <Grid item xs={12} lg={12}>
-            <TextField
+          <Grid item xs={12} lg={12} sx={{border:"0px solid black" , display:"flex" , alignItems:"center" , justifyContent:"center"}}>
+            {/* <TextField
               id="outlined-basic"
               label="Outlined"
               variant="outlined"
               name="search"
               value={search}
               onChange={handleSearch}
-            />
+            /> */}
+            <input className="bookListSearch" placeholder="Search" name="search"
+              value={search}
+              onChange={handleSearch} />
           </Grid>
-          <Grid item xs={6} lg={6}>
-            <Button variant="outlined" onClick={handleOpen}>
+          <Grid item xs={12} lg={12} sx={{border:"0px solid black" , display:"flex" , alignItems:"center" , justifyContent:"center"}}>
+            <button className="bookListBtn" style={{paddingLeft:"10px" , paddingRight:"10px" , width:"200px"}} onClick={handleOpen}>
               Issue A Book
-            </Button>
+            </button>
           </Grid>
           
         </Grid>

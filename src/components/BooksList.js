@@ -145,7 +145,7 @@ const BooksList = () => {
                     <div key={index} className="bookcard" style={{width:"80%"}}>
                     <Grid container sx={{border:"0px solid black" , display:"flex" , alignItems:"center" , justifyContent:"flex-start" , padding:"0px"}}>
                       <Grid item xs={2} lg={2} sx={{border:"0px solid black" , display:"flex" , alignItems:"center" , justifyContent:"center" , padding:"10px"}}>
-                        <img src="./book.png" style={{height:"100px"}} />
+                        <img src="./book.png" style={{height:"80px"}} />
                       </Grid>
                       <Grid item xs={5} lg={5} sx={{border:"0px solid black" , display:"flex" , alignItems:"center" , justifyContent:"flex-start" , padding:"0px"}}>
                        <ul>

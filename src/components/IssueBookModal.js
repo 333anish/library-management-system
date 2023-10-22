@@ -5,6 +5,7 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import "../styles/modal.css"
 import {
   QueryDocumentSnapshot,
   QuerySnapshot,
@@ -143,15 +144,17 @@ export default function IssueBookModal(props) {
         }}
       >
         <Fade in={props.state}>
-          <Box sx={style}>
+          <Box sx={style} className="modal">
             <Typography id="transition-modal-title" variant="h6" component="h2">
               Issue Book
             </Typography>
-            <Typography id="transition-modal-description" sx={{ mt: 2 }}>
-              
+            <Typography id="transition-modal-description" sx={{ mt: 2 }} className="modalcont">
+            <Typography id="transition-modal-title" variant="h6" component="h2">
+              Issue Book
+            </Typography>
 
               {alluserData.length > 0 ? (
-                <FormControl fullWidth>
+                <FormControl sx={{width:"70%"}}>
                   <InputLabel id="demo-simple-select-label">User</InputLabel>
                   <Select
                     labelId="demo-simple-select-label"
@@ -181,9 +184,9 @@ export default function IssueBookModal(props) {
                 </FormControl>
               ) : null}
               <br />
-              <Button varient="outlined" onClick={handleSubmit}>
+              <button className="modalSubmit" onClick={handleSubmit}>
                 Issue Book
-              </Button>
+              </button>
               {success ? (
                 <Alert severity="success">Book Issued Successfully</Alert>
               ) : null}
