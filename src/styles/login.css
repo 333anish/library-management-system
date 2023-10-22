@@ -1,0 +1,64 @@
+.loginDivcont {
+    height: 85vh;
+    width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 30px;
+    background-color: #e2e0e0;
+
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+        10px 10px 15px rgba(70, 70, 70, 0.12);
+}
+
+.form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.input {
+    width: 70%;
+    height: 35px;
+    border: 0px solid black;
+    border-radius: 50px;
+    background-color: #e2e0e0;
+    padding: 20px;
+    padding-left: 40px;
+    box-shadow: inset -10px -10px 15px rgba(255, 255, 255, 0.5),
+        inset 10px 10px 15px rgba(70, 70, 70, 0.12);
+    outline-style: none;
+    color: gray;
+    font-size: 20px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.btn{
+    background-color: #e2e0e0;
+
+    box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.5),
+        10px 10px 15px rgba(70, 70, 70, 0.12),
+        10px 10px 30px rgba(70, 70, 70, 0.12);
+        outline-style: none;
+        border: 0px solid black;
+        height: 70px;
+        width: 140px;
+        border-radius: 10px;
+        color: gray;
+        cursor: pointer;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 20px;
+
+}
+
+.forgot{
+    color :gray;
+    text-decoration: none;
+}
