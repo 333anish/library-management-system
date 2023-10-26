@@ -185,7 +185,7 @@ const Login = () => {
             Submit
           </Button> */}
           <button type="submit" className="btn" onClick={handleSubmit}>Sign In</button>
-          <a href="" className="forgot"><p>Forgeot Password ?</p></a>
+          <a href="./" className="forgot"><p>Forgeot Password ?</p></a>
           {showALert ? <Alert severity="error">Login Failed</Alert> : null}
         </form>
 

@@ -1,2 +1,4 @@
 user - name, id ,role,  password, mobile, email, viewHistory[name,date] , issueHistory[bookname,issuedate,returndate] , favourites[bookDetail]
 bookData - id, name , isbn , issuedToHistory[id,name] , category , quantity , 
+
+book Issue Data : BookId , BookName , UserID , USerName, issueDate , dueDate , return Date 
